@@ -1,7 +1,10 @@
 .jumbotron{
-  background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v445-taus-02b-technologybackgroundidea_2_0.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=791920a03a12df5cd274768a605b19b4");
+  background-image: url("https://longreadsblog.files.wordpress.com/2019/01/GettyImages-955854460.jpg?w=1200");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   
 }
 .display-4:hover{
-    color:rgb(206, 201, 201)
+    color:white
 }
