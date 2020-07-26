@@ -1,9 +1,10 @@
 import React from "react";
+import Search from "../components/search/Search";
 
 const Mainpage = ()=>{
     return(
         <>
-        <h1>This is Mainpage</h1>
+        <Search/>
         </>
     );
 };
