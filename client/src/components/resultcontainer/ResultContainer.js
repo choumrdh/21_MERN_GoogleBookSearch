@@ -1,11 +1,11 @@
 import React from "react";
 
-const ResultContainer = ()=>{
-    return(
-        <>
-        <h1>This is ResultContainer</h1>
-        </>
-    );
+const ResultContainer = () => {
+  return (
+  <div className="container">
+      
+  </div>
+  );
 };
 
 export default ResultContainer;
