@@ -17,36 +17,44 @@ class Mainpage extends Component {
     event.preventDefault();
     API.googleSearchBook(this.state.searchBook)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         if (res.data.totalItems === 0) {
           alert("Please Enter a valid book name");
         } else {
           let searchDatas = res.data.items;
-        //   console.log("this is search data", searchDatas)
-          searchDatas = searchDatas.map(searchData => {
+          //   console.log("this is search data", searchDatas)
+          searchDatas = searchDatas.map((searchData) => {
             searchData = {
               key: searchData.id,
               id: searchData.id,
               title: searchData.volumeInfo.title,
               author: searchData.volumeInfo.authors,
               description: searchData.volumeInfo.description,
-              image: searchData.volumeInfo.imageLinks.thumbnail,
+              image: searchData.volumeInfo.imageLinks
+                ? searchData.volumeInfo.imageLinks.smallThumbnail
+                : "https://www.brdtex.com/wp-content/uploads/2019/09/no-image-480x480.png",
               link: searchData.volumeInfo.infoLink,
             };
             return searchData;
           });
-          this.setState({ bookList: searchDatas });
+          this.setState({ bookList: searchDatas, searchBook: "" });
         }
       })
       .catch((err) => console.log(err));
   };
-//   handleBtnSave = (event) => {
-//     event.preventDefault();
-//     const book = this.state.bookList
-//     API.saveBook({
-        
-//     })
-//   };
+
+  handleBtnSave = (id) => {
+    const saveBook = this.state.bookList.filter((book) => book.id === id)[0];
+    API.saveBook({
+      title: saveBook.title,
+      author: saveBook.author,
+      description: saveBook.description,
+      image: saveBook.image,
+      link: saveBook.link,
+    })
+      .then((book) => console.log("Successfullly save book", book))
+      .catch((err) => console.log(err));
+  };
 
   render() {
     return (
@@ -58,7 +66,7 @@ class Mainpage extends Component {
         />
         <ResultContainer
           bookList={this.state.bookList}
-        //   handleBtnSave={this.handleBtnSave}
+          handleBtnSave={this.handleBtnSave}
         />
       </>
     );

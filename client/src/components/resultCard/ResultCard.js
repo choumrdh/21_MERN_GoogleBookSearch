@@ -14,7 +14,8 @@ const ResultCard = (props) => {
             View
           </a>
         </button>
-        <button className="float-right btn btn-outline-success m-2">
+        <button className="float-right btn btn-outline-success m-2"
+        id={props.id} onClick={()=>props.handleBtnSave(props.id)}>
             Save
         </button>
         <h5 className="card-title">Written by: {props.author}</h5>

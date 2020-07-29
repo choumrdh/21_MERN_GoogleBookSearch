@@ -9,11 +9,13 @@ const ResultContainer = (props) => {
       {BookList.map((book) => ( 
         <ResultCard
           key={book.key}
+          id={book.id}
           title={book.title}
           author={book.author}
           description={book.description}
           image={book.image}
           link={book.link}
+          handleBtnSave={props.handleBtnSave}
         />
       ))}
     </div>
