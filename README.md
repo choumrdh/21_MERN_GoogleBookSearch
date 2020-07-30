@@ -43,7 +43,7 @@
 - Name: Michelle [![follower](https://img.shields.io/github/followers/choumrdh?label=follower&style=social)](https://github.com/choumrdh?tab=followers)
 
 > - GitHub: [choumrdh](https://github.com/choumrdh)
-> - email: chou.m.rdh@gmail.com
+> - email: m.w.chou21@gmail.com
 > - Heroku: [Google Book Search](https://mern-googlebooksearch.herokuapp.com/)
 
 ### License :trophy:
