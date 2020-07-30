@@ -6,9 +6,9 @@ const ResultContainer = (props) => {
   return (
     <div className="container">
      <h1>Search Book Results</h1>
-      {BookList.map((book) => ( 
+      {BookList.map((book, index) => ( 
         <ResultCard
-          key={book.key}
+          key={index}
           id={book.id}
           title={book.title}
           author={book.author}
