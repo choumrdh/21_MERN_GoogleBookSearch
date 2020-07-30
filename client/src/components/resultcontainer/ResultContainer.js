@@ -5,7 +5,7 @@ const ResultContainer = (props) => {
   const BookList = props.bookList;
   return (
     <div className="container">
-     <h1>Search Book Results</h1>
+     <h1 className="text-monospace">Search Book Results</h1>
       {BookList.map((book, index) => ( 
         <ResultCard
           key={index}

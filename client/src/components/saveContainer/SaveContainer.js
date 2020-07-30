@@ -6,7 +6,7 @@ const SaveCaontainer = (props) => {
   console.log(savedBookList);
   return (
     <div className="container">
-      <h1>Saved Book List</h1>
+      <h1 className="text-monospace">Saved Book List</h1>
       {savedBookList.map((Savedbook, index) => (
         <SaveCard
           key={index}

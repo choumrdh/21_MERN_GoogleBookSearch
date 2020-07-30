@@ -3,10 +3,9 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="navbar-brand">
-        <NavLink to="/">Google Books</NavLink>
-      </div>
+          <NavLink to="/">Google Books</NavLink></div>
       <button
         className="navbar-toggler"
         type="button"
@@ -21,13 +20,11 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarGoogleBookSearch">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <NavLink to="/" className="nav-link">
-              Search
-            </NavLink>
+            <NavLink to="/" className="nav-link">Search</NavLink>
           </li>
           <li className="nav-item">
             <NavLink to="/save" className="nav-link">
-              Saved
+              Save
             </NavLink>
           </li>
         </ul>
