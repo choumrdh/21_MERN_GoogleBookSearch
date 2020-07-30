@@ -1,22 +1,38 @@
 import React from "react";
 
 const SavedCard = (props) => {
-  return (
-    <div className="card">
-      <div className="card-header">
-        <a href={props.link} target="_blank" rel="noopener noreferrer">
-          {props.title}
-        </a>
+    return (
+      <div className="card col-12 col-sm-12 col-md-12 col-lg-12 m-3">
+        <div className="card-header">
+          <h3 className="list-inline-item"><b>{props.title}</b></h3>
+          <button className="float-right btn btn-outline-primary m-2">
+            <a
+              href={props.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View
+            </a>
+          </button>
+          <button className="float-right btn btn-outline-danger m-2"
+          id={props._id} onClick={()=>props.deleteBook(props._id)}>
+              Delete
+          </button>
+          <h5 className="card-title">Written by: {props.author}</h5>
+          
+        </div>
+        <div className="card-body">
+          <p className="card-text">
+            <img
+              src={props.image}
+              alt={props.title}
+              className="float-left col-12 col-md-3"
+            />
+            {props.description}
+          </p>
+        </div>
       </div>
-      <div className="card-body">
-        <h5 className="card-title">{props.author}</h5>
-
-        <img src={props.image} alt={props.title} />
-        <p className="card-text">{props.description}</p>
-      </div>
-      
-    </div>
-  );
-};
+    );
+  };
 
 export default SavedCard;

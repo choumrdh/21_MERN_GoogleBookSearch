@@ -52,7 +52,7 @@ class Mainpage extends Component {
       image: saveBook.image,
       link: saveBook.link,
     })
-      .then((book) => console.log("Successfullly save book", book))
+      .then((book) => console.log("Successfullly save book", book), alert("Successfullt saved book"))
       .catch((err) => console.log(err));
   };
 
